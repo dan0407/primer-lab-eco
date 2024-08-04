@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css.css" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+			#data-container {
+				margin-top: 20px;
+			}
+			.item {
+				margin-bottom: 10px;
+			}
+			img {
+				max-width: 300px;
+				border: 2px solid #ccc;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="myForm">
+			<label for="limit">Limit:</label>
+			<input type="number" id="limit" name="limit" required /><br /><br />
+
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required /><br /><br />
+
+			<label for="type">Type:</label>
+			<input type="text" id="type" name="type" required /><br /><br />
+
+			<button type="button" onclick="submitForm()">Submit</button>
+		</form>
+
+		<div id="result"></div>
+
+		<h1>All Anime</h1>
+		<button id="fetch-button">SHOW</button>
+		<div id="data-container"></div>
+
+		<script>
+			function submitForm() {
+				const limit = document.getElementById('limit').value;
+				const name = document.getElementById('name').value;
+				const type = document.getElementById('type').value;
+
+				const resultDiv = document.getElementById('result');
+				resultDiv.innerHTML = `<p>Limit: ${limit}</p><p>Name: ${name}</p><p>Type: ${type}</p>`;
+
+				fetchData(limit, name, type);
+			}
+		</script>
+		<script src="./js.js"></script>
+	</body>
+</html>
