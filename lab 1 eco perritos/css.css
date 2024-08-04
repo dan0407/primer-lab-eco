@@ -1,0 +1,67 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  background-image: url('https://www.transparenttextures.com/patterns/paw-print.png');
+  text-align: center;
+}
+
+#fetch-button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#fetch-button:hover {
+  background-color: #a0522d;
+  transform: translateY(-3px);
+}
+
+#data-container {
+  margin-top: 30px;
+}
+
+.item {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  max-width: 80%;
+}
+
+.item img {
+  max-width: 100%;
+  border-radius: 15px;
+  border: 8px solid #ffd700;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 24px;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+/* Añadir huellitas alrededor del contenedor */
+#data-container::before,
+#data-container::after {
+  content: '🐾';
+  font-size: 40px;
+  color: #8b4513;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+#data-container::before {
+  left: 10px;
+}
+
+#data-container::after {
+  right: 10px;
+}
